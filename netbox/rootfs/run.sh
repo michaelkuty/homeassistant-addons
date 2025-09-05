@@ -75,7 +75,9 @@ fi
 # Make media files persistent
 if [ ! -d /data/media ]; then
 	_info "Moving media to persistent storage.."
-	mv /opt/netbox/netbox/media /data/
+	ls /opt/netbox/media
+	ls /opt/netbox/netbox
+	mv /opt/netbox/media /data/
 fi
 
 # Is already symlink? --> netbox restarted (backup hooks)
